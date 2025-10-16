@@ -26,7 +26,7 @@ PAGE_TEXT_CHAR_THRESHOLD = 30
 IMAGE_DPI_SCALE = 2
 
 # Gemini OCR setup
-configure(api_key="AIzaSyC-0QS0QPPfsB4xzR-ZkTWgsZVScn1i8ws") 
+configure(api_key="your-gemini-api-key") 
 gemini_model = GenerativeModel("gemini-2.5-flash")
 
 PROMPT = """
@@ -270,3 +270,4 @@ if __name__ == "__main__":
     )
 
     print("RESULT:", result)
+
