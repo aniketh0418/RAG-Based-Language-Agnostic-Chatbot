@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+qdrant-client==1.15.1
+pymongo
+sentence-transformers
+langchain
+PyMuPDF
+Pillow
+python-docx
+python-pptx
+fpdf
+google-generativeai
