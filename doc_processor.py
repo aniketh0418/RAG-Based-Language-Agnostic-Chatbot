@@ -17,9 +17,9 @@ from qdrant_client.http import models
 from google.generativeai import configure, GenerativeModel
 
 # ---------------- CONFIG ----------------
-QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.5hqNxJ5Lr9KCqmgjCIjA4THBoPw1n_UYaJ3AQTJWNRc"
-QDRANT_URL = "https://0896e0e6-4b50-438a-82db-09ba2ce1b1a8.us-east-1-1.aws.cloud.qdrant.io"
-QDRANT_COLLECTION = "campus_docs_collection"
+QDRANT_API_KEY = "your-qdrant-api-key"
+QDRANT_URL = "your-qdrant-connection-url"
+QDRANT_COLLECTION = "your-qdrant-collection-name"
 EMBEDDING_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 
 PAGE_TEXT_CHAR_THRESHOLD = 30
@@ -268,4 +268,5 @@ if __name__ == "__main__":
         doc_id=doc_id,
         table_data=True
     )
+
     print("RESULT:", result)
