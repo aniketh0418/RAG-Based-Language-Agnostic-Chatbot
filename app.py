@@ -19,17 +19,17 @@ import google.generativeai as genai
 from doc_processor import process_file_to_qdrant
 
 # ---------------- CONFIG ----------------
-GEMINI_API_KEY = "AIzaSyC-0QS0QPPfsB4xzR-ZkTWgsZVScn1i8ws"
-QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.5hqNxJ5Lr9KCqmgjCIjA4THBoPw1n_UYaJ3AQTJWNRc"
-QDRANT_URL = "https://0896e0e6-4b50-438a-82db-09ba2ce1b1a8.us-east-1-1.aws.cloud.qdrant.io"
+GEMINI_API_KEY = "<your-gemini-api-key>"
+QDRANT_API_KEY = "<your-qdrant-api-eky>"
+QDRANT_URL = "<your-qdrant-connection-url>"
 
-COLLECTION_NAME = "cloud_storage_qdrant"
+COLLECTION_NAME = "<your-qdrant-collection-name>"
 TOP_K = 5
 
-MONGO_URI = "mongodb+srv://rapoluav12:Rapolu%4012@cluster2.pppgjbc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2"
-MONGO_DB = "LAC"
-MONGO_COLLECTION = "chats"   # for chats
-MONGO_DOCS_COLLECTION = "docs"  # new collection for storing file metadata
+MONGO_URI = "<your-mongodb-connection-uri>"
+MONGO_DB = "<your-mongodb-database-name>"
+MONGO_COLLECTION = "<your-mongodb-collection-name>"   # for chats
+MONGO_DOCS_COLLECTION = "<your-mongodb-collection-name>"  # new collection for storing file metadata
 
 # Gemini setup
 genai.configure(api_key=GEMINI_API_KEY)
@@ -261,5 +261,6 @@ def delete_file(filename: str):
     result = docs_collection.delete_one({"filename": filename})
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail=f"File '{filename}' not found in MongoDB")
+
 
     return {"success": True, "message": f"File '{filename}' deleted from MongoDB and Qdrant"}
