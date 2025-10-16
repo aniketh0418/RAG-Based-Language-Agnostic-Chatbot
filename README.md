@@ -83,7 +83,7 @@ pip install -r requirements.txt
 
 ### 4️⃣ Configure Environment Variables
 
-Replace placeholders in app.py and doc_processor.py with your credentials:
+Replace placeholders in `app.py` and `doc_processor.py` with your credentials:
 
 ```bash
 GEMINI_API_KEY = "<your-gemini-api-key>"
