@@ -37,6 +37,7 @@ It extracts, indexes, and retrieves information from multiple document formats (
 Data Ingestion → Data Extraction → Data Vectorization → Semantic Search → Context Retrieval → Answer Generation
 ```
 ![System Architecture](assets/architecture.png)
+
 *Figure: High-level architecture of the chatbot pipeline.*
 
 1. **Upload documents** – PDFs, images, PPTX, DOCX.  
@@ -125,6 +126,7 @@ curl -X POST http://127.0.0.1:8000/chat \
 Here’s a glimpse of the chatbot in action 👇
 
 ![Chat Interface Demo](assets/demo.png)
+
 *Figure: Sample query and response flow in the chatbot.*
 
 ---
